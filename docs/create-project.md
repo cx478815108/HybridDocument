@@ -34,9 +34,12 @@ config.json
     "entryJS": "example",  // js 主入口文件
     "entryJSON":"production" // 这个固定就行
 }
+
 ```
 
 ## 2. 根目录project.json
+
+!> 根目录project.json 文件必不可少
 
 ```
 {
