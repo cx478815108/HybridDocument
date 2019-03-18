@@ -1,35 +1,23 @@
-# Quick start
+# TokenHybrid
 
-找一个空白的文件夹吧，以后可能常用它了。暂且取名`Token`
+## TokenHybrid是什么？
 
-#### Step1 - 下载编译器
+> TokenHybrid是一个将 HTML, CSS, JS 进行Native 渲染的库
+**拥有类似Vue 的API，可以做到对JS 对象数据的细粒度追踪**
 
-```bash
-git clone https://github.com/cx478815108/TokenHybridCompiler.git
-```
+## 性能怎么样？
+iPhone 7 测试
+一般页面
 
-#### Step2 - 让编译器跑起来
+* 首次渲染耗时：20-50ms
+* 第二次渲染耗时：10-20ms 左右
+* 大量数据列表渲染:也是同样的耗时
 
-cd `TokenHybridCompiler`文件夹
+## 调试麻烦吗？
 
-```bash
-npm install
-```
+* 支持无线重载UI
+* 支持无线调试JavaScript
 
-#### Step3 - 运行调试工具
-cd `TokenHybridCompiler/src/Debug/`
-
-```bash
-node Debug.js
-```
-执行完上述命令后，你的默认浏览器将自动打开UI 调试工具
-
-
-#### Step4 - 打开掌理iOS 客户端
-
-```
-1. 将你的iPhone 连接到和电脑同一个WiFi 环境
-2. 进入TokenHybrid 调试入口，点击连接
-3. 点击UI 调试工具的 "重装Zip包"，即可运行示例小程序
-```
+## more 
+coming...
 
