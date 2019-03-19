@@ -5,7 +5,7 @@
 使用方法
 
 ```
-<label style="width: 100%;height: auto;background-color: rgb(20,120,130);font-size: 14px"" @click="buttonClick">{{name}}
+<label style="width: 100%;height: auto;background-color: rgb(20,120,130);font-size: 14px" @click="buttonClick">{{name}}
 </label>
 ```
 
@@ -24,3 +24,5 @@
 | clip             | 数字类型，只接受1或者0                           | 组件的子视图是否超出自身范围可见  |
 |font-size      |例如：14px                                                |字号                                             |
 |                  |                                                  |                                   |
+
+
