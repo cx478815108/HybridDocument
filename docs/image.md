@@ -7,31 +7,32 @@
 使用方法
 
 ```
-<image style:"width: 50%; height: 30%" src: www.xxxx.com contentMode: "6" showActivity: "1"><image>
+<image style:"width: 50%; height: 30%" src: www.xxxx.com contentMode: "scaleToFill" showActivity: "1"><image>
 ```
 
 ## 支持设置的`native`属性
 
-| 属性 key     | 可选值                      | 描述           |
-| ------------ | --------------------------- | -------------- |
-| src          | 字符串类型                  | 图片地址URL    |
-| contentMode  | 字符串数字，支持 "0" - "12" | 图片拉伸等属性 |
-| showActivity | 布尔类型，可选值"0" "1"     | 加载菊花动画   |
+| 属性 key     | 可选值                  | 描述           |
+| ------------ | ----------------------- | -------------- |
+| src          | 字符串类型              | 图片地址URL    |
+| contentMode  | 字符串类型              | 图片拉伸等属性 |
+| showActivity | 布尔类型，可选值"0" "1" | 加载菊花动画   |
 
 ```
-contentMode 属性列表 下面从 0 对应到 12
-		UIViewContentModeScaleToFill,
-    UIViewContentModeScaleAspectFit,      // contents scaled to fit with fixed aspect. remainder is transparent
-    UIViewContentModeScaleAspectFill,     // contents scaled to fill with fixed aspect. some portion of content may be clipped.
-    UIViewContentModeRedraw,              // redraw on bounds change (calls -setNeedsDisplay)
-    UIViewContentModeCenter,              // contents remain same size. positioned adjusted.
-    UIViewContentModeTop,
-    UIViewContentModeBottom,
-    UIViewContentModeLeft,
-    UIViewContentModeRight,
-    UIViewContentModeTopLeft,
-    UIViewContentModeTopRight,
-    UIViewContentModeBottomLeft,
-    UIViewContentModeBottomRight,
+contentMode 属性列表
+ 		"scaleToFill"    : 0,
+    "scaleAspectFit" : 1,
+    "scaleAspectFill": 2,
+    "redraw"         : 3,
+    "center"         : 4,
+    "top"            : 5,
+    "bottom"         : 6,
+    "left"           : 7,
+    "right"          : 8,
+    "topLeft"        : 9,
+    "topRight"       : 10,
+    "bottomLeft"     : 11,
+    "bottomRight"    : 12，
+支持以上属性
 ```
 
