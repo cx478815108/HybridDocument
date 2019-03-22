@@ -20,19 +20,19 @@
 
 ```
 contentMode 属性列表
- 		"scaleToFill"    : 0,
-    "scaleAspectFit" : 1,
-    "scaleAspectFill": 2,
-    "redraw"         : 3,
-    "center"         : 4,
-    "top"            : 5,
-    "bottom"         : 6,
-    "left"           : 7,
-    "right"          : 8,
-    "topLeft"        : 9,
-    "topRight"       : 10,
-    "bottomLeft"     : 11,
-    "bottomRight"    : 12，
+"scaleToFill"    : 0,
+"scaleAspectFit" : 1,
+"scaleAspectFill": 2,
+"redraw"         : 3,
+"center"         : 4,
+"top"            : 5,
+"bottom"         : 6,
+"left"           : 7,
+"right"          : 8,
+"topLeft"        : 9,
+"topRight"       : 10,
+"bottomLeft"     : 11,
+"bottomRight"    : 12，
 支持以上属性
 ```
 
