@@ -18,6 +18,7 @@
 - JavaScript
 
   - [响应式介绍和DOM 获取](reactive.md)
+  - [DOM API](dom.md)
   - [App 生命周期API](appevent.md)
   - [JS API](jsapi.md)
 
