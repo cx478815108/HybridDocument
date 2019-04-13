@@ -1,7 +1,7 @@
 # 创建工程
 ## 1. 示例程序解释
 
-> 当我们用词App的时候，其实也是一个页面，个人倾向于把页面也称呼为App，只不过它只有一个页面
+> 我们约定客户端每个可见的最大范围称之为页面。
 
 #### 文件解释
 
@@ -30,32 +30,13 @@
 ```
 config.json 
 {
-    "title":"我是界面标题",
-    "entryJS": "example",  // js 主入口文件
-    "entryJSON":"production" // 这个固定就行
+    "title":"小程序示例",
+    "entryJS": "index.js",
+    "exportZipName":"example",
+    "bundle.identifier":"com.token.example.demo",
+    "displayName":"示例"
 }
 
-```
-
-## 2. 根目录project.json
-
-!> 根目录project.json 文件必不可少
-
-```
-{
-    "projects":[
-        {
-            "projectId": "welcome",         // 一个App工程的Id，建议同名
-            "exportZipName": "welcome",      // 打包后的zip文件名，这个非常重要
-            "EnteryHTMLName" : "index.html", //编译器编译入口的html文件
-            "projectFolderName":"welcome",   // 整个App文件夹的名字
-            "version":"1.0.1"                //版本
-        }
-    ],
-    "debugReloadZipNames" : ["welcome"],  //UI 调试工具重载App列表 注意是zip名
-    "debugCompileProjects": ["welcome"],  //UI 调试工具编译目录列表
-    "currentProject":"welcome"           // 编译器当前编译目录
-}
 ```
 
 
