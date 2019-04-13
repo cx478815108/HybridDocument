@@ -2,7 +2,7 @@
 
 #### TokenHybrid是什么？
 
-> TokenHybrid是一个使用XML模板, CSS,构建Native 原生用户界面，并使用JavaScript 进行渲逻辑操作的库，可以帮你快速构建高性能的原生应用程序
+> TokenHybrid是一个使用XML模板, CSS, JavaScript 构建iOS原生应用界面的库，它可以帮你快速构建高性能的原生应用程序
 **拥有类似Vue 的API，可以做到对JS 对象数据的细粒度追踪**
 
 Example
