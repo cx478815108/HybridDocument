@@ -7,7 +7,9 @@
     <label>我是{{name}}<label>
 </div>
 ```
-## App事件如下
+## App生命周期如下
+
+在正确的生命周期中做正确的事情，十分重要
 
 ```JavaScript
 const app = {
@@ -20,7 +22,7 @@ const app = {
 // 将app注册为 可以使用@bind绑值为'app'的组件
 const main = token.registComponent("app", app);
 
-App({
+token.appLife({
     onLaunch(){
         log("即将开始渲染该App");
     },
@@ -39,8 +41,8 @@ App({
     didDisappear(){
         log("页面已经不可见");
     },
-    onExit(){
-        log("App即将销毁");
+    onPanelLoad(obj){
+        log("App modal 面板出现渲染完毕");
     }
 })
 

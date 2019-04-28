@@ -2,7 +2,7 @@
 
   - [快速开始](quickstart.md)
   - [创建工程](create-project.md)
-
+  
 - 组件
 
   - [div](div.md)
@@ -11,14 +11,19 @@
   - [scroll](scroll.md)
   - [image](image.md)
   - [table](table.md)
+  - [flowlist](flowlist.md)
   - [input](input.md)
   - [segment](segment.md)
   - [webview](webview.md)
   - [loading](loading.md)
   - [switch](switch.md)
 
+- 模态页面
+  - [如何弹出页面](modal.md) 
+
 - 模块
   - [Native](jsapi.md)
+  - [网络请求](http.md)
   - [文件操作](fs.md)
   - [导航](nav.md)
   - [跨页面通信](broadcast.md)
