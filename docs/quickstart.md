@@ -1,36 +1,26 @@
 # Quick start
 
-找一个空白的文件夹吧，以后可能常用它了。暂且取名`Token`
+#### Step1 - 下载编译器客户端
 
-#### Step1 - 下载编译器
+适用于Windows [点击下载](https://engineclient.oss-cn-beijing.aliyuncs.com/developeTool/engineclient%20Setup%201.0.2.exe)
 
-```bash
-git clone https://github.com/cx478815108/TokenHybridCompiler.git
+适用于Mac [点击下载](https://engineclient.oss-cn-beijing.aliyuncs.com/developeTool/engineclient-1.0.2.dmg)
+
+#### Step2 - 用编译器创建工程
+
+```
+1. 点击工程管理
+2. 点击右上角 “+”
+3. 新建工程，并点击进入调试模式
 ```
 
-#### Step2 - 让编译器跑起来
 
-cd `TokenHybridCompiler`文件夹
-
-```bash
-npm install
-```
-
-#### Step3 - 运行调试工具
-cd `TokenHybridCompiler/src/Debug/`
-
-```bash
-node Debug.js
-```
-执行完上述命令后，你的默认浏览器将自动打开UI 调试工具
-
-
-#### Step4 - 打开掌理iOS 客户端
+#### Step3 - 打开掌理iOS 客户端
 
 ```
 1. 将你的iPhone 连接到和电脑同一个WiFi 环境
 2. 进入TokenHybrid 调试入口，点击连接
-3. 点击UI 调试工具的 "重装Zip包"，即可运行示例小程序
+3. 打开调试器自动模式开始体验吧
 ```
 
 
