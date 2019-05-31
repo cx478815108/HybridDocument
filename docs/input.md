@@ -110,6 +110,41 @@ colorModeType 的语义化的值和数字对应如下
 
 ```
 
+## 事件处理
+
+```
+<!--绑定回调监听者-->
+<input @listener = "inputListener"></input>
+```
+
+在JavaScript 中设置回调
+
+```
+const app = {
+    listeners:{
+        inputListener:{
+            onBeginEditing(text){
+                console.log("开始编辑了");
+            },
+            onTextChange(text){
+                console.log("文本变化了");
+            },
+            onEndEditing(text){
+                console.log("结束了编辑，通常是用户隐藏了键盘");
+            },
+            onReturn(text){
+                console.log("用户点击了键盘上的 return 按钮");
+            }
+        },
+    },
+    data(){
+        return {
+            ...
+        }
+    }
+}
+```
+
 ## 使用DOM API
 
 ```
