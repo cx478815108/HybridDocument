@@ -15,11 +15,11 @@
 
 ```
 <table id = "form" 
-       t:data = "item in dataSource" 
+       t:data = "item in dataSource"  // 你也可以写成 "(item, index) in dataSource"
        t:switch = "cellType" >
             
-    <cell t:case="A">
-       <label>{{item.name}}</label>
+    <cell t:case="A" id = "{{index}}">
+       <label>{{item.name}} -- {{index}}</label>
     </cell>
     
     <!--你可以写多个cell去匹配，没有限制-->
