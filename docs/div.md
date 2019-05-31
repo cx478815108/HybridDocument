@@ -86,10 +86,18 @@ divItem.loopIndex     // 获取组件的循环指针
 > divItem.backgroundColor = "rgb(255,255,255)" //设置为白色
 
 ```
-divItem.attributes      // 组件的attributes
+divItem.layout          // 设置组件的flex布局，不会立即生效，需要调用commitLayout() 生效
+divItem.attributes      // 组件的attributes，不会立即生效，需要调用commitAttributes() 生效
+divItem.transform       // 组件的形变  不会立即生效，需要调用commitTransform() 生效
 divItem.backgroundColor // 组件的背景色
 divItem.alpha           // 组件的透明度
 divItem.hidden          // 组件是否隐藏
 divItem.info            // 获取组件的所有信息 避免js和原生语言多次交互，一次性全部返回width,height,left,...等信息
+```
+
+```
+divItem.commitLayout()     // 提交 需要更改layout
+divItem.commitAttributes() // 提交 需要更改各种属性
+divItem.commitTransform()  // 提交 需要更改组件的外观形变 
 ```
 

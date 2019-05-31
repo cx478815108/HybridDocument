@@ -96,12 +96,13 @@ const app = {
 **所有div的DOM API 均可以使用**
 
 ```
-scrollTo(point, animate) // 滚动到point 点 
-scrollToTop(animate)     // 滚动到顶部 是否使用动画 
-
+1. scrollTo(point, animate)   // 滚动到point 点 
+2. scrollToTop(animate)       // 滚动到顶部 是否使用动画 
+3. enableHeaderRefresh(value) // 是否开启下拉刷新
+4. enableFooterRefresh(value) // 是否开启上拉加载更多功能
 
 // 参数说明
-animate // 布尔值
+animate 和 value // 布尔值
 point = { 
     x: 100,
     y: 100
