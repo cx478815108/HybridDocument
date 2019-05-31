@@ -81,3 +81,15 @@ contentMode 对照表
 }
 ```
 
+## 使用DOM API
+**所有div的DOM API 均可以使用**
+
+特有API 
+
+```
+setImage(src)            // 设置图片
+setHighlightedImage(src) // 设置高亮图片
+stopAnimating();         // 停止播放动画
+startAnimating();        // 开始播放动画图片
+```
+

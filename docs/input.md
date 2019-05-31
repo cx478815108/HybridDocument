@@ -110,3 +110,32 @@ colorModeType 的语义化的值和数字对应如下
 
 ```
 
+## 使用DOM API
+
+```
+<!--绑定回调监听者-->
+<input id = "myInput"></input>
+```
+
+```
+const input = $native.el('myInput'); // id值
+```
+
+### API 列表
+-------
+
+可读可写
+
+```
+1. input.value       // 读取或者设置input 的文本
+2. input.placeholder // 读取或者设置input 的占位文本
+```
+
+可调用的方法
+
+```
+input.beginEditing(); // 弹出键盘，获取焦点
+input.endEditing();   // 关闭输入，让键盘消失
+```
+
+

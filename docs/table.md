@@ -148,5 +148,35 @@ rightType 对照表
 ```
 
 
+## 使用DOM API
+**所有div的DOM API 均可以使用**
+
+```
+<!--绑定回调监听者-->
+<table id = "table"></table>
+```
+
+```
+const table = $native.el('table'); // id值
+table.removeAtIndex(0, 3)          // 删除第0个数据 ，使用第3种动画
+```
+
+##### API 列表
+
+可调用的方法
+
+```
+1. removeAtIndex(index, animationType) // 删除第index个数据 使用animationType动画
+2. pushData(arrayData, animationType)  // 在尾部追加一个数组，使用animationType动画
+3. popData(length, animationType)      // 删除尾部length 长度的数据，使用animationType动画
+4. scrollToItem(index, animationType)  // 滚动到第index 个cell ，使用animationType动画
+5. refreshData(list)                   // 使用list重新渲染数据
+6. reload() //刷新整个列表数据
+7. enableHeaderRefresh(value)          // 是否开启下拉刷新
+8. enableFooterRefresh(value)          // 是否开启上拉加载更多功能
+```
+
+
+
 
 

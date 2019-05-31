@@ -92,3 +92,20 @@ const app = {
 }
 ```
 
+## 使用DOM API
+**所有div的DOM API 均可以使用**
+
+```
+scrollTo(point, animate) // 滚动到point 点 
+scrollToTop(animate)     // 滚动到顶部 是否使用动画 
+
+
+// 参数说明
+animate // 布尔值
+point = { 
+    x: 100,
+    y: 100
+}
+```
+
+

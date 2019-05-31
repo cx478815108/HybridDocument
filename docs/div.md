@@ -7,6 +7,7 @@
 ```html
 <div class = "pure" ></div>
 ```
+
 ## 点击事件
 使用 `@click` 绑定点击事件
 
@@ -52,6 +53,43 @@ label {
 | hidden| 数字类型，只接受1或者0 | 组件是否可见|
 | disable| 数字类型，只接受1或者0 | 组件是否可以和用户交互|
 
+## 使用DOM API
+
+```
+<!--绑定回调监听者-->
+<div id = "mainDiv"></div>
+```
+
+```
+const divItem = $native.el('mainDiv'); // id值
+```
+
+### API 列表
+-------
 
 
+**只读属性**
+
+```
+divItem.width         // 获取组件的宽度
+divItem.height        // 获取组件的高度
+divItem.left          // 获取组件的左边坐标
+divItem.top           // 获取组件的顶部坐标
+divItem.tagName       // 获取组件的tagName
+divItem.id            // 获取组件的id
+divItem.children      // 获取子组件的dom
+divItem.componentData // 获取组件的渲染数据
+divItem.loopIndex     // 获取组件的循环指针
+```
+**可读可写属性**
+> 举例想要通过DOM API更改组件背景颜色
+> divItem.backgroundColor = "rgb(255,255,255)" //设置为白色
+
+```
+divItem.attributes      // 组件的attributes
+divItem.backgroundColor // 组件的背景色
+divItem.alpha           // 组件的透明度
+divItem.hidden          // 组件是否隐藏
+divItem.info            // 获取组件的所有信息 避免js和原生语言多次交互，一次性全部返回width,height,left,...等信息
+```
 
