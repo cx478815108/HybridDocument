@@ -7,12 +7,36 @@
 ```html
 <div class = "pure" ></div>
 ```
+## 点击事件
+使用 `@click` 绑定点击事件
 
-## 支持设置的`Native`属性
-当我们想要div组件禁止和用户交互可以使用 `disable` 
-例子 `<div class = "pure" disable = "1"></div>` 这样就不会有点击事件的传递了
+```
+<div @click = "buttonClick()">
+    按钮文本
+</div>
+```
 
-div的`Native` 属性是所有组件都可以设置的，也就是`label,button,scroll,webview`等都可以设置
+## 可用于div 的css属性
+
+```
+label {
+    background-color : rgb(255,0,0);  // 组件的背景色
+    border-color : rgb(255,205,0);    // 组件的边框颜色
+    border-width : 2px;               // 组件的边框宽度
+    border-radius : 4px;              // 组件的边框圆角大小
+    z-index : 10;                     // 组件的zindex
+}
+```
+
+## 支持响应式的属性
+可以使用胡子语法绑定该属性，直接使用js 修改
+**注意**响应式的属性 颜色不支持 "red"等语义化的颜色表示，只能使用"rgb,rgba,16进制表示"
+
+例如
+
+```html
+<div background-color = "{{myColor}}" hidden = "{{shouldShow}}"></div>
+``` 
 
 属性列表
 
@@ -25,6 +49,8 @@ div的`Native` 属性是所有组件都可以设置的，也就是`label,button,
 | border-radius| 数字类型，单位:无 ,例如：8| 组件的圆角 |
 | z-index| 数字类型，例如：1000 | 组件的视图层级,越高越在最前面显示 |
 | clip| 数字类型，只接受1或者0 | 组件的子视图是否超出自身范围可见|
+| hidden| 数字类型，只接受1或者0 | 组件是否可见|
+| disable| 数字类型，只接受1或者0 | 组件是否可以和用户交互|
 
 
 
