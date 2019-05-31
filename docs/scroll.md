@@ -6,7 +6,7 @@
 使用方法
 
 ```
-<scroll style:"width: 100%; height: 50%;" 
+<scroll style = "width: 100%; height: 50%;" 
     showVIndicator = "false" 
     showHIndicator = "false" >
 </scroll>
@@ -30,17 +30,20 @@
 
 ## 下拉刷新或者上拉加载更多
 
+
+在scroll 标签里添加 `headerRefresh, footerRefresh` 控制下拉刷新或者上拉加载更多是否开启
+
 ```
 <scroll style:"width: 100%; height: 50%;" 
-    headerRefresh = "true" // 开启下拉刷新 
-    footerRefresh = "true" // 开启上拉加载更多
-    onHeaderRefresh = "onHeaderRefresh()" // 回调
-    onFooterRefresh = "onFooterRefresh()" // 回调
+    headerRefresh = "true"          
+    footerRefresh = "true"
+    onHeaderRefresh = "onHeaderRefresh()" 
+    onFooterRefresh = "onFooterRefresh()" 
     >
 </scroll>
 ```
 
-在JavaScript 中设置回调
+在JavaScript 中设置回调 
 
 ```
 const app = {
@@ -66,6 +69,7 @@ const app = {
 ```
 <!--绑定回调监听者-->
 <scroll @listener = "scrollListener">
+   <div></div> 
 </scroll>
 ```
 
@@ -76,7 +80,7 @@ const app = {
     listeners:{
         scrollListener:{
             onStateChange(state){
-                log("state 改变了" + state);
+                console.log("state 改变了" + state);
             }
         },
     },

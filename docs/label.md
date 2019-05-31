@@ -6,9 +6,9 @@
 
 ```
 <label style="width: 100%;
-        height: auto;
-        background-color: rgb(20,120,130);
-        font-size: 14px">
+       height: auto;
+       background-color: rgb(20,120,130);
+       font-size: 14px">
     {{name}}
 </label>
 ```

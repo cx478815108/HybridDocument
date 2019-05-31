@@ -41,38 +41,52 @@
 | color             | 字符串类型，接受rgb,rgba,16进制 | 文本颜色         |
 | highlighted-color | 字符串类型，接受rgb,rgba,16进制 | 高亮文本颜色     |
 
-## 注意
+**注意**
 
-button组件的 contentMode值可以设置为如下的
+> **contentMode** 
+1. 如果被胡子语法绑定 必须绑定值是数字
+2. 如果不被胡子语法绑定， 可以使用语义化的值，因为编译器会转化为数字
 
-```
-非响应式 可以使用语义化的值，因为编译器会自动转为数字
-<button contentMode:"scaleAspectFit">
-    按钮文本
-</button>
-
-contentMode响应式属性的值只能为数字
-<button contentMode:"{{modeValue}}"> // modeValue 只能是数字 scaleToFill对应0 bottomRight对应1
-    按钮文本
-</button>
-```
-
-
+##### 举例: 不被胡子语法绑定
 
 ```
-"scaleToFill",
-"scaleAspectFit",
-"scaleAspectFill",
-"redraw",
-"center",
-"top",
-"bottom",
-"left",
-"right",
-"topLeft",
-"topRight",
-"bottomLeft",
-"bottomRight",
+<button contentMode = "scaleAspectFit" ></button>
+```
+
+##### 举例: 被胡子语法绑定
+```
+<!--被胡子语法绑定-->
+<button contentMode = "{{mode}}" ></button>
+
+const app = {
+    data(){
+        return {
+            mode:1 // 必须是数字 或 ”1“
+        }
+    }
+}
+
+```
+
+## 语义化的值和数字对应表
+
+```
+contentMode 对照表
+{
+    "scaleToFill"    : 0,
+    "scaleAspectFit" : 1,
+    "scaleAspectFill": 2,
+    "redraw"         : 3,
+    "center"         : 4,
+    "top"            : 5,
+    "bottom"         : 6,
+    "left"           : 7,
+    "right"          : 8,
+    "topLeft"        : 9,
+    "topRight"       : 10,
+    "bottomLeft"     : 11,
+    "bottomRight"    : 12,
+}
 ```
 
 
