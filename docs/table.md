@@ -54,11 +54,10 @@ const app = token.registComponent("app", {
 
 ## 事件回调
 
-首先使用`@listener`
+使用`@listener`表明需要在`listeners`的`tableListener`里面处理事件
 
 ```
-<table @listener = "tableListener" >
-</table>
+<table @listener = "tableListener" ></table>
 ```
 
 回调代码和方法如下
@@ -103,6 +102,50 @@ cell 的个性化设置
 | shouldHighlight | 布尔类型 | 是否有高亮状态 |
 | highlightedColor | 字符串类型 | 高亮状态的颜色 |
 | rightType | 数字类型 | cell 最右边的装扮组件类型 |
+
+
+**注意**
+> **rightType** 
+1. 如果被胡子语法绑定 必须绑定值是数字
+2. 如果不被胡子语法绑定， 可以使用语义化的值，因为编译器会转化为数字
+
+##### 举例: 不被胡子语法绑定
+
+```
+<cell rightType = "indicator" ></cell>
+```
+
+##### 举例: 被胡子语法绑定
+```
+<!--被胡子语法绑定-->
+<cell rightType = "customType" ></cell>
+
+const app = {
+    data(){
+        return {
+            dataSource:[{
+                cellType:"A",
+                name:"我会被t:case = 'A'的cell 渲染",
+                customType:1 // 必须是数字 或 "1"
+            }]
+        }
+    }
+}
+
+```
+
+## 语义化的值和数字对应表
+
+```
+rightType 对照表
+{
+    "none"            : 0,
+    "indicator"       : 1,
+    "detaildisclosure": 2,
+    "checkmark"       : 3,
+    "detail"          : 4
+}
+```
 
 
 
