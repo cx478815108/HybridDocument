@@ -3,14 +3,12 @@
 虽然提示用户下载成功，处理完成的通知可以使用JS API完成，但是仍然需要自定义整个弹出视图。
 
 ```
- .(TokenHybridCompiler)
-└── welcome
-    └── routers     // 子页面根文件夹
-        └── second
-            ...
-    └── widgets     // 模态视图文件夹
+──demo
+    └── mainPage     // 子页面根文件夹
+    ├── modalPages     // 模态视图文件夹
         ├── alert.html   // 模态A面板
         ├── input.html   // 模态B面板
+        └── ...
     
 ```
 

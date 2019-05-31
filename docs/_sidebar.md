@@ -1,7 +1,12 @@
 - 准备开始
 
   - [快速开始](quickstart.md)
-  - [创建工程](create-project.md)
+  - [工程结构](create-project.md)
+  - [引擎语法](syntax.md)
+
+- 模块化工程
+
+  - [模块化](module.md)
   
 - 组件
 
