@@ -19,8 +19,12 @@
 
 ## 可用于div 的css属性
 
+**Tips:** 想要**背景为无色**可以按1,2设置，无色背景不会影响到其他组件
+1. `background-color : rgba(0,0,0,0);`
+2. `background-color : none;`
+
 ```
-label {
+div {
     background-color : rgb(255,0,0);  // 组件的背景色
     border-color : rgb(255,205,0);    // 组件的边框颜色
     border-width : 2px;               // 组件的边框宽度
@@ -45,7 +49,7 @@ label {
 | --- | --- | --- |
 | background-color| 字符串类型，接受rgb,rgba,16进制 如：rgb(200,0,0)| 组件的背景色 |
 | border-color| 字符串类型，接受rgb,rgba,16进制 | 组件的边框颜色 |
-| alpha| 字符串类型，范围 0 - 1  | 组件的透明度，0代表完全透明 |
+| alpha| 字符串类型，范围 0 - 1  | 组件的透明度，0：完全透明，1：不透明，会影响子组件和文本颜色 |
 | border-width| 数字类型，单位:无 ,例如：2 | 组件的边框宽度 |
 | border-radius| 数字类型，单位:无 ,例如：8| 组件的圆角 |
 | z-index| 数字类型，例如：1000 | 组件的视图层级,越高越在最前面显示 |

@@ -26,6 +26,10 @@
 
 同时支持所有div 的css 属性
 
+**Tips:** 想要**背景为无色**可以按1,2设置，无色背景不会影响到文字颜色
+1. `background-color : rgba(0,0,0,0);`
+2. `background-color : none;`
+
 ```
 label {
     line-height : 30px;  // 行高 css里面可以带px

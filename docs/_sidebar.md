@@ -3,7 +3,7 @@
   - [快速开始](quickstart.md)
   - [工程结构](create-project.md)
   - [引擎语法](syntax.md)
-  - [Flex排版和CSS额外说明](addition.md)
+  - [使用必知](addition.md)
 
 - 模块化工程
 
