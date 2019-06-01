@@ -1,14 +1,11 @@
-- 准备开始
+- 最后更新：2019.6.1 14:33
+- 开始使用
 
   - [快速开始](quickstart.md)
   - [工程结构](create-project.md)
-  - [引擎语法](syntax.md)
-  - [使用必知](addition.md)
-
-- 模块化工程
-
   - [模块化](module.md)
-  
+  - [引擎语法](syntax.md)
+  - [需要知道](addition.md)
 - 组件
   - [div](div.md)
   - [label](label.md)

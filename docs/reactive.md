@@ -28,6 +28,12 @@ const main = token.registComponent("app", app);
 main.data.name = "Bob"
 ```
 
+## 数组的响应式
+!> 由于本框架自己写了一个`runtime.js` 观察JavaScript 的对象数据的更改，有一些不足之处
+对数组整体的修改最好是重新赋值，不要调用数组的方法 例如 `[].reverce(),[].shift()`等。
+但是对于数组的内部元素的修改 `list[2].name` 等修改是没有问题的。
+哪位大神帮助一下实现`Proxy`对数组的完美拦截，得到数据路径？
+
 ## 使用JS 获取某个DOM元素，进而实现某些高级功能
 
 > $native 对象是被注入到JavaScript运行环境的工具
