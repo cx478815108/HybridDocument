@@ -1,33 +1,33 @@
-# table组件
+# list组件
 
-> table组件是高性能的大列表加载组件，具有组件重复利用，渐进加载的特点
+> list组件是高性能的大列表加载组件，具有组件重复利用，渐进加载的特点
 
-**table 会根据设置的数据类型，用匹配的视图去渲染数据**
+**list 会根据设置的数据类型，用匹配的视图去渲染数据**
 
-1. table 内部的视图不会被立即渲染，在需要时才会进行渲染
-2. table 只会渲染 `<cell>`标签 包裹的视图，`cell`也是特殊的`div`标签
-3. table 标签需要使用`t:for`设置渲染的数组
+1. list 内部的视图不会被立即渲染，在需要时才会进行渲染
+2. list 只会渲染 `<row>`标签 包裹的视图，`row`也是特殊的`div`标签
+3. list 标签需要使用`t:for`设置渲染的数组
 
 看下面例子
 
-**使用一个table 组件 设置了其渲染的数组是`dataSource`，
-并且匹配的是数组中的元素的`cellType`**
+**使用一个list 组件 设置了其渲染的数组是`dataSource`，
+并且匹配的是数组中的元素的`rowType`**
 
 ```
-<table id = "form" 
+<list id = "form" 
        t:data = "item in dataSource"  // 你也可以写成 "(item, index) in dataSource"
-       t:switch = "cellType" >
+       t:switch = "rowType" >
             
-    <cell t:case="A" id = "{{index}}">
+    <row t:case="A" id = "{{index}}">
        <label>{{item.name}} -- {{index}}</label>
-    </cell>
+    </row>
     
-    <!--你可以写多个cell去匹配，没有限制-->
+    <!--你可以写多个row去匹配，没有限制-->
     
-    <cell t:default >
+    <row t:default >
        <label>{{item.name}}</label>
-    </cell>
-</table>
+    </row>
+</list>
 ```
 
 再看看怎么填充数据
@@ -38,11 +38,11 @@ const app = token.registComponent("app", {
             return {
                 dataSource:[
                     {
-                        cellType:"A",
-                        name:"我会被t:case = 'A'的cell 渲染"
+                        rowType:"A",
+                        name:"我会被t:case = 'A'的row 渲染"
                     }，
                     {
-                        name:"我会被t:default 的cell 渲染"
+                        name:"我会被t:default 的row 渲染"
                     }
                 ]
             }
@@ -54,10 +54,10 @@ const app = token.registComponent("app", {
 
 ## 事件回调
 
-使用`@listener`表明需要在`listeners`的`tableListener`里面处理事件
+使用`@listener`表明需要在`listeners`的`listListener`里面处理事件
 
 ```
-<table @listener = "tableListener" ></table>
+<list @listener = "listListener" ></list>
 ```
 
 回调代码和方法如下
@@ -65,13 +65,13 @@ const app = token.registComponent("app", {
 ```
 const app = {
     listeners:{
-        tableListener:{
+        listListener:{
             onSelectItem(data){
-                // 某个cell 被点击了
+                // 某个row 被点击了
                 console.log(data);
             },
             onDeselectItem(data){
-                // 某个cell 被取消点击了
+                // 某个row 被取消点击了
                 console.log(data);
             }
         },
@@ -86,22 +86,22 @@ const app = {
 
 ## 个性化设置
 
-table 的个性化设置 
+list 的个性化设置 
 
 | 属性 key  | 可选值     | 描述     |
 | ---------- | ----------|----------|
 | showSeparator | 布尔类型 | 是否显示大列表的分割线 |
 | separatorLeft | 数字类型 | 大列表的分割线左边缩进 |
 | separatorRight | 数字类型 | 大列表的分割线右边缩进 |
-| allowDelete | 布尔类型 | 是否允许左滑删除某个cell |
+| allowDelete | 布尔类型 | 是否允许左滑删除某个row |
 
-cell 的个性化设置
+row 的个性化设置
 
 | 属性 key  | 可选值     | 描述     |
 | ---------- | ----------|----------|
 | shouldHighlight | 布尔类型 | 是否有高亮状态 |
 | highlightedColor | 字符串类型 | 高亮状态的颜色 |
-| rightType | 数字类型 | cell 最右边的装扮组件类型 |
+| rightType | 数字类型 | row 最右边的装扮组件类型 |
 
 
 **注意**
@@ -112,20 +112,20 @@ cell 的个性化设置
 ##### 举例: 不被胡子语法绑定
 
 ```
-<cell rightType = "indicator" ></cell>
+<row rightType = "indicator" ></row>
 ```
 
 ##### 举例: 被胡子语法绑定
 ```
 <!--被胡子语法绑定-->
-<cell rightType = "customType" ></cell>
+<row rightType = "customType" ></row>
 
 const app = {
     data(){
         return {
             dataSource:[{
-                cellType:"A",
-                name:"我会被t:case = 'A'的cell 渲染",
+                rowType:"A",
+                name:"我会被t:case = 'A'的row 渲染",
                 customType:1 // 必须是数字 或 "1"
             }]
         }
@@ -153,12 +153,12 @@ rightType 对照表
 
 ```
 <!--绑定回调监听者-->
-<table id = "table"></table>
+<list id = "list"></list>
 ```
 
 ```
-const table = $native.el('table'); // id值
-table.removeAtIndex(0, 3)          // 删除第0个数据 ，使用第3种动画
+const list = $native.el('list'); // id值
+list.removeAtIndex(0, 3)          // 删除第0个数据 ，使用第3种动画
 ```
 
 ##### API 列表
@@ -169,7 +169,7 @@ table.removeAtIndex(0, 3)          // 删除第0个数据 ，使用第3种动画
 1. removeAtIndex(index, animationType) // 删除第index个数据 使用animationType动画
 2. pushData(arrayData, animationType)  // 在尾部追加一个数组，使用animationType动画
 3. popData(length, animationType)      // 删除尾部length 长度的数据，使用animationType动画
-4. scrollToItem(index, animationType)  // 滚动到第index 个cell ，使用animationType动画
+4. scrollToItem(index, animationType)  // 滚动到第index 个list ，使用animationType动画
 5. refreshData(list)                   // 使用list重新渲染数据
 6. reload() //刷新整个列表数据
 7. enableHeaderRefresh(value)          // 是否开启下拉刷新

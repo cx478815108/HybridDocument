@@ -12,7 +12,7 @@
   - [button](button.md)
   - [scroll](scroll.md)
   - [image](image.md)
-  - [table](table.md)
+  - [list](table.md)
   - [flowlist](flowlist.md)
   - [input](input.md)
   - [segment](segment.md)
