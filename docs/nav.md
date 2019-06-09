@@ -6,7 +6,8 @@ App页面间导航可以使用`$nav` 对象
 const item = {
     url:'xxx/xxx', // 页面的url
     animated:true, // 带push动画
-    parameters:obj // 传递到下一个页面的参数
+    parameters:obj, // 传递到下一个页面的参数
+    title:"下一个页面的标题"
 }
 
 $nav.push(item) // 打开下一个页面
